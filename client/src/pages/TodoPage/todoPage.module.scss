@@ -1,0 +1,60 @@
+.list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.item{
+  border-left: 1px solid #999;
+  border-top: 1px solid #999;
+  box-shadow: 2px 2px 2px 1px #999;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 0 15px 10px;
+  width: 20vw;
+
+  & div:not(:last-child){
+    margin-bottom: 5px;
+  }
+}
+
+.title{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.description{
+
+}
+
+.deadline{
+  &[data-isCompleted = true]{
+    padding: 2px;
+    background-color: #FF6F6F;
+    border-radius: 10px;
+  }
+
+  &[data-isCompleted = false]{
+    padding: 2px 5px;
+    background-color: #8EFF6F;
+    border-radius: 10px;
+  }
+}
+
+.options{
+  display: flex;
+  flex-direction: row;
+
+  & div{
+    flex: 1 0 50%;
+  }
+}
+
+.editBtn{
+  text-decoration: none;
+  color: #333;
+  background-color: #73CEFF;
+  padding: 5px 10px;
+  border-radius: 10px
+}

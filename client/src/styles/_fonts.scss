@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'Noto Sans Mono';
+  src: url('../fonts/NotoSansMono-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Noto Sans Mono';
+  src: url('../fonts/NotoSansMono-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nabla';
+  src: url('../fonts/Nabla[EDPT,EHLT].ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Deadauthor';
+  src: local('Deadauthor'),
+      url('../fonts/Deadauthor.ttf') format('truetype'),
+      url('../fonts/Deadauthor.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+}

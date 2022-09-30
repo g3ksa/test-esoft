@@ -1,0 +1,52 @@
+.main{
+  background-color: #999;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo{
+  font-size: 2rem;
+  font-family: 'Deadauthor', sans-serif;
+}
+
+.items{
+  margin: 0;
+  padding: 4px;
+}
+
+.item{
+  display: inline;
+  margin-right: 5px;
+  padding: 3px;
+
+  & a{
+    text-decoration: none;
+    transition: .3s;
+  }
+
+  &:hover a{
+    color: #63BDFF !important;
+  }
+}
+
+.logoutBtn{
+  color: #fff;
+  border: 1px solid #0083FF;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background: #0083FF;
+  transition: .3s;
+
+  &:hover{
+    background: #73CEFF;
+    border-color: #73CEFF;
+    color: #FF7474;
+  }
+}
