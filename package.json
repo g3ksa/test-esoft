@@ -20,6 +20,7 @@
 	},
 	"homepage": "https://github.com/g3ksa/test-esoft#readme",
 	"dependencies": {
-		"concurrently": "^7.4.0"
+		"concurrently": "^7.4.0",
+		"nodemon": "^2.0.20"
 	}
 }
