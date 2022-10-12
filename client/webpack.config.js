@@ -1,25 +1,25 @@
-const path = require('path');
-const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const path = require('path')
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
-let mode = 'development';
-let target = 'web';
+let mode = 'development'
+let target = 'web'
 const plugins = [
 	new CleanWebpackPlugin(),
 	new MiniCssExtractPlugin(),
 	new HtmlWebpackPlugin({
 		template: './src/index.html',
 	}),
-];
+]
 
 if (process.env.NODE_ENV === 'production') {
-	mode = 'production';
-	target = 'browserslist';
+	mode = 'production'
+	target = 'browserslist'
 }
 if (process.env.SERVE) {
-	plugins.push(new ReactRefreshWebpackPlugin());
+	plugins.push(new ReactRefreshWebpackPlugin())
 }
 
 module.exports = {
@@ -78,6 +78,11 @@ module.exports = {
 			},
 
 			{
+				test: /\.tsx?$/,
+				use: 'ts-loader',
+				exclude: /node_modules/,
+			},
+			{
 				test: /\.jsx?$/,
 				exclude: /node_modules/,
 				use: {
@@ -88,7 +93,7 @@ module.exports = {
 			{
 				test: /\.(eot|ttf|woff|woff2)$/,
 				type: 'asset/resource',
-				dependency: {not: ['url']}
+				dependency: { not: ['url'] },
 			},
 		],
 	},
@@ -96,14 +101,14 @@ module.exports = {
 	plugins,
 
 	resolve: {
-		extensions: ['.js', '.jsx'],
+		extensions: ['.ts', '.tsx', '.js', '.jsx'],
 	},
 
 	devtool: 'source-map',
 	devServer: {
 		static: './dist',
 		proxy: {
-			'/api': 'http://localhost:5000'
+			'/api': 'http://localhost:5000',
 		},
 		hot: true,
 		open: true,
@@ -113,4 +118,4 @@ module.exports = {
 		historyApiFallback: true,
 		port: 3000,
 	},
-};
+}
