@@ -1,0 +1,25 @@
+{
+	"name": "test-esoft",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"server": "npm run server --prefix ./server",
+		"client": "npm start --prefix ./client",
+		"start": "concurrently \"npm run server\" \"npm run client\""
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/g3ksa/test-esoft.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/g3ksa/test-esoft/issues"
+	},
+	"homepage": "https://github.com/g3ksa/test-esoft#readme",
+	"dependencies": {
+		"concurrently": "^7.4.0"
+	}
+}
